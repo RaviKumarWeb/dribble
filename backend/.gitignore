@@ -1,34 +1,37 @@
+# Dependency directories
+node_modules/
+
+# Environment variables file (e.g., .env)
+.env
+
 # Logs
 logs
 *.log
+
+# Debugging files
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
 
-# Dependency directories
-node_modules
-packages/*/node_modules
+# Dependency lock files
+package-lock.json
+yarn.lock
 
-# Build output
-build
-dist
-coverage
-
-# Environment variables
-.env
-.env.local
-.env.*.local
-
-# IDE and editor files
-.vscode
-.idea
+# Editor directories and files
+.vscode/
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
+*.sw?
 
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# Built production files
+dist/
+build/
+out/
+
+# Local configuration files
+config.js

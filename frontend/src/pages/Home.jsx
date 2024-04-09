@@ -12,11 +12,14 @@ const Home = () => {
 
   const getUser = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/user/", {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      });
+      const response = await axios.get(
+        `${import.meta.env.VITE_REACT_API_URL}`,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
       if (response.data) {
         setUser(response.data);
       }
@@ -28,7 +31,7 @@ const Home = () => {
   const resendEmail = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/user/resend-verification-email",
+        `${import.meta.env.VITE_REACT_API_URL}/resend-verification-email`,
         {},
         {
           headers: {

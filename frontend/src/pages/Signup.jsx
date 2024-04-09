@@ -18,7 +18,7 @@ const Signup = () => {
       setLoading(true);
       const userData = { email, password, name, username };
       const response = await axios.post(
-        "http://localhost:5000/api/user/signup",
+        `${import.meta.env.VITE_REACT_API_URL}/signup`,
         userData
       );
       if (response.data) {

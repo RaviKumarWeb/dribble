@@ -42,7 +42,7 @@ const Getstarted = () => {
     try {
       setLoading(true);
       const response = await axios.post(
-        "http://localhost:5000/api/user/profile-options",
+        `${import.meta.env.VITE_REACT_API_URL}/profile-options`,
         { profileOptions: cardsData[checkedIndex].title },
         {
           headers: {

@@ -57,7 +57,7 @@ const CreateProfile = () => {
       formData.append("location", location);
 
       const response = await axios.post(
-        "http://localhost:5000/api/user/create-profile",
+        `${import.meta.env.VITE_REACT_API_URL}/create-profile`,
         formData,
         {
           headers: {
