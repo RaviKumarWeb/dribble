@@ -20,7 +20,7 @@ app.use(upload());
 app.use("/uploads", express.static(__dirname + "/uploads"));
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://dribble-delta.vercel.app/",
   })
 );
 
